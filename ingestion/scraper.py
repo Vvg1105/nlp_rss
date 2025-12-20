@@ -7,7 +7,7 @@ from datetime import datetime
 from dateutil import parser as date_parser
 from typing import Dict, List, Optional
 import logging
-from news_sources import NEWS_SOURCES
+from .news_sources import NEWS_SOURCES
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
