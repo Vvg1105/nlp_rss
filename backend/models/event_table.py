@@ -10,6 +10,6 @@ class Event(Base):
     summary = Column(String, index=True)
     start_time = Column(DateTime, index=True)
     last_update = Column(DateTime, index=True)
-    centroid_embedding = Column(String, index=True)
+    centroid_embedding = Column(String)  # NO INDEX - embedding is too long
     article_count = Column(Integer, index=True)
 

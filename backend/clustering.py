@@ -147,10 +147,11 @@ def cluster_articles(threshold=0.75, db_session: Session = None):
         article_embedding = json.loads(article.embedding_vector)
         
         # Try to find matching event
-        match, score = find_best_matching_event(article_embedding, threshold, db_session)
+        match_result = find_best_matching_event(article_embedding, threshold, db_session)
         
-        if match:
+        if match_result:
             # Found a match - assign to existing event
+            match, score = match_result
             article.event_id = match
             db_session.commit()
             

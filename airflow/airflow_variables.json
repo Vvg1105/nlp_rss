@@ -1,0 +1,8 @@
+{
+  "max_articles_per_feed": 10,
+  "clustering_threshold": 0.75,
+  "pipeline_current_id": 0,
+  "retry_attempts": 2,
+  "retry_delay_minutes": 5
+}
+

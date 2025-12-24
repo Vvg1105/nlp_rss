@@ -10,6 +10,6 @@ class Article(Base):
     url = Column(String, index=True)
     title = Column(String, index=True)
     published_at_time = Column(DateTime, index=True)
-    full_text = Column(String, index=True)
-    embedding_vector = Column(String, index=True)
-    event_id = Column(Integer, ForeignKey("events.event_id"), index=True, default = None) 
+    full_text = Column(String)  # NO INDEX - text is too long
+    embedding_vector = Column(String)  # NO INDEX - vector is too long
+    event_id = Column(Integer, ForeignKey("events.event_id"), index=True, default=None) 
